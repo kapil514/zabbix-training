@@ -1,0 +1,41 @@
+Check status of services
+
+Use systemctl command for systemd process OS. (E.g : systemctl status <service-name>) 
+
+service zabbix-server status
+
+# Zabbix Agent
+service zabbix-agent status
+
+# Zabbix Agent 2
+service zabbix-agent2 status
+
+service apache2 status
+
+service mysql status
+View the Zabbix Server configuration file
+
+
+cat /etc/zabbix/zabbix_server.conf
+View the Zabbix Agent configuration file
+
+
+# Zabbix Agent
+cat /etc/zabbix/zabbix_agentd.conf
+# Zabbix Agent 2
+cat /etc/zabbix/zabbix_agent2.conf
+View the Frontend PHP configuration
+
+
+cat /etc/zabbix/web/zabbix.conf.php
+Follow the Zabbix Server log file (CTRL-C to exit)
+
+
+tail -f /var/log/zabbix/zabbix_server.log
+Follow the Zabbix Agent log file (CTRL-C to exit)
+
+
+# Zabbix Agent
+tail -f /var/log/zabbix/zabbix_agentd.log
+# Zabbix Agent 2
+tail -f /var/log/zabbix/zabbix_agent2.log
