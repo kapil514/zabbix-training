@@ -1,0 +1,14 @@
+https://www.zabbix.com/download
+
+Select the agent OS and other information for installation instruction and follow them.
+https://www.zabbix.com/download?zabbix=7.0&os_distribution=rocky_linux&os_version=9&components=agent_2&db=&ws=
+
+# rpm -Uvh https://repo.zabbix.com/zabbix/7.0/rocky/9/x86_64/zabbix-release-7.0-4.el9.noarch.rpm
+# dnf clean all
+b. Install Zabbix agent2
+# dnf install zabbix-agent2 zabbix-agent2-plugin-*
+c. Start Zabbix agent2 process
+Start Zabbix agent2 process and make it start at system boot.
+
+# systemctl restart zabbix-agent2
+# systemctl enable zabbix-agent2
